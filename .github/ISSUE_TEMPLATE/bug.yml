@@ -1,0 +1,59 @@
+name: Bug report
+description: Report reproducible behavior that appears incorrect
+title: "[Bug]: "
+labels:
+  - "type: bug"
+  - "status: needs triage"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem. Search existing issues first. Do not include secrets or vulnerability details here. Use the repository Security tab for vulnerabilities.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened, and what did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Provide the smallest example and exact steps that reproduce the problem.
+      placeholder: |
+        1. Run ...
+        2. Configure ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: Which release or commit did you test?
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include relevant operating system, runtime, browser, and dependency versions.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add logs or screenshots after removing secrets and personal data.
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched existing issues and did not find a duplicate.
+          required: true
+        - label: This report does not contain a security vulnerability or sensitive data.
+          required: true
